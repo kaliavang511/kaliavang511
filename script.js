@@ -1,7 +1,7 @@
 function makeFire(){
   let fireDiv = document.getElementById("fireDiv")
   fireDiv.innerHTML += `
-    <span onClick="deletePotato(event)">
+    <span>
     🔥
     </span>
   `
@@ -28,24 +28,27 @@ function handleSubmit(event) {
 
   let affirmation = document.getElementById("affirmationInput").value
   let author = document.getElementById("authorInput").value
-      console.log(`Author is: ${author}, Affirmation is: ${affirmation}`)
+      // console.log(`Author is: ${author}, Affirmation is: ${affirmation}`)
 
       
 
 let affirmationList = document.getElementById("affirmationList")
-console.log("Current list",affirmationList)
-
+// console.log("Current list",affirmationList)
 
 affirmationList.innerHTML += `
   
   <tr>
   <td> ${affirmation} </td>
   <td> ${author} </td>
+  <td> <button onClick="deleteThis(event)">❌</button> </td>
   </tr>`
 
-      
-      
     
 }
 
+
+function deleteThis(event) {
+  let task = event.target.parentElement.parentElement;
+  task.remove();
+}
 
