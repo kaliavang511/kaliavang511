@@ -34,20 +34,27 @@
 
     <section>
       <h3>Create an Affirmation:</h3>
-      <form>
+      <form onSubmit="handleSubmit(event)">
         <input
           placeholder="Affirmation"
-          type="text">
+          type="text"
+          id="affirmationInput">
         <input
           placeholder="Author"
-          type="text">
-        <button>Submit</button>
+          type="text"
+          id ='authorInput'>
+          
+        <button type="submit">Submit</button>
+
+        <!-- <div id="list"> -->
+
+        </div>
       </form>
     </section>
     
     <section>
       <h3>Your Affirmations:</h3>
-      <table>
+      <table id="list">
         <thead>
           <tr>
             <th>Affirmation Text</th>
