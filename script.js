@@ -32,15 +32,18 @@ function handleSubmit(event) {
 
       
 
-let list = document.getElementById("list")
-console.log("Current list",list)
+let affirmationList = document.getElementById("affirmationList")
+console.log("Current list",affirmationList)
 
 
-list.innerHTML += `
+affirmationList.innerHTML += `
   
-  <spam>
- ${author}${affirmation}
-  </spam>`
+  <tr>
+  <td> ${affirmation} </td>
+  <td> ${author} </td>
+  </tr>`
+
+      
       
     
 }
